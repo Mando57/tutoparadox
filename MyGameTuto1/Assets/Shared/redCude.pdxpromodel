@@ -1,0 +1,10 @@
+!ProceduralModelAsset
+Id: 8d5507bd-d876-41b3-8421-5f9765ae25a8
+SerializedVersion: 5
+Tags: []
+Type: !CubeProceduralModel
+    Size: {X: 1.0, Y: 1.0, Z: 1.0}
+    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+    UvScale: {X: 1.0, Y: 1.0}
+    MaterialInstance:
+        Material: 73fae6c4-05e4-4847-8996-2f47d4037f6a:Material

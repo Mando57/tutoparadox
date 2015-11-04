@@ -1,0 +1,136 @@
+!SceneAsset
+Id: 1d3e19ec-7ee5-4f67-a304-3b827f1965b8
+SerializedVersion: 18
+Tags: []
+Hierarchy:
+    RootEntities:
+        - 510149fb-04cc-4b6a-8708-8415b8a24249
+        - 4e0a995f-012b-46d9-9c56-7ceed81f88f7
+        - ee67c298-48f8-4ceb-bef3-84785ceb224b
+        - 4f230e58-a314-4a15-bd82-fa0324227fb0
+        - 4f02dac8-a292-4742-b6da-f4e322a11b47
+    Entities:
+        -   Entity:
+                Name: Camera
+                Components:
+                    CameraComponent.Key:
+                        Projection: Perspective
+                        VerticalFieldOfView: 82.0
+                    TransformComponent.Key:
+                        Position: {X: -1.0, Y: 1.99225783, Z: 2.7}
+                        Rotation: {W: 0.981060266, X: -0.08583164, Y: -0.1729874, Z: -0.0151344351}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 4e0a995f-012b-46d9-9c56-7ceed81f88f7
+            Design:
+                Folder: null
+        -   Entity:
+                Name: knight
+                Components:
+                    ModelComponent.Key:
+                        Model: 3f57425b-3145-4b7e-88d7-563af6cf5571:knight
+                        Materials:
+                            - null
+                            - null
+                            - null
+                    ScriptComponent.Key:
+                        Scripts:
+                            - !MyGame.AnimationScript,MyGameTuto1.Game
+                                AlternativeAnimation: Run
+                                DefaultAnimation: Idle
+                                Id: 1ddc013e-9e0e-4a14-9268-8d4f2dba8ecc
+                    AnimationComponent.Key:
+                        Animations:
+                            Idle: 62c56c1d-a560-41c7-a5df-63dfaa8a3999:he00_normal_idle Animation
+                            Run: b4d14f6b-2390-4115-aae1-c444f3211548:he03_run Animation
+                    TransformComponent.Key:
+                        Position: {X: 1.10203183, Y: -0.0179653466, Z: 0.18710126}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 4f02dac8-a292-4742-b6da-f4e322a11b47
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Skybox
+                Components:
+                    SkyboxComponent.Key:
+                        Skybox: a19176e1-f8d1-4221-8304-e8340b73b40c:Skybox
+                    LightComponent.Key:
+                        Type: !LightSkybox {}
+                        Intensity: 0.25
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 4f230e58-a314-4a15-bd82-fa0324227fb0
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Ground
+                Components:
+                    ModelComponent.Key:
+                        Model: 37f7fc57-0e2e-409a-b712-dbd54c2c4d6f:Ground
+                        Materials:
+                            - null
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {W: 1.0, X: 0.0, Y: 0.0, Z: 0.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: 510149fb-04cc-4b6a-8708-8415b8a24249
+            Design:
+                Folder: null
+        -   Entity:
+                Name: Directional light
+                Components:
+                    LightComponent.Key:
+                        Type: !LightDirectional
+                            Color: !ColorRgbProvider
+                                Value: {R: 1.0, G: 1.0, B: 1.0}
+                            Shadow:
+                                Enabled: true
+                                Filter: !LightShadowMapFilterTypePcf
+                                    FilterSize: Filter5x5
+                                Size: XLarge
+                                DepthRange: {}
+                                PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
+                                BiasParameters: {}
+                        Intensity: 0.8
+                    ScriptComponent.Key:
+                        Scripts: []
+                    TransformComponent.Key:
+                        Position: {X: 0.0, Y: 2.0, Z: 0.0}
+                        Rotation: {W: 0.7912401, X: -0.5540323, Y: 0.212012157, Z: 0.1484525}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: []
+                Id: ee67c298-48f8-4ceb-bef3-84785ceb224b
+            Design:
+                Folder: null
+    SceneSettings:
+        GraphicsCompositor: !SceneGraphicsCompositorLayers
+            Cameras:
+                -   Name: null
+                    Camera:
+                        Entity: {Id: 4e0a995f-012b-46d9-9c56-7ceed81f88f7}
+                        Component: CameraComponent.Key
+            Layers: []
+            Master:
+                Name: SceneGraphicsLayer
+                Output: !MasterRenderFrameProvider {}
+                Renderers:
+                    - !ClearRenderFrameRenderer
+                        Color: {R: 0.392156869, G: 0.58431375, B: 0.929411769, A: 1.0}
+                        Output: !CurrentRenderFrameProvider {}
+                    - !SceneCameraRenderer
+                        Mode: !CameraRendererModeForward {}
+                        Camera:
+                            Index: 0
+                        Output: !CurrentRenderFrameProvider {}
+                        Viewport: {X: 0.0, Y: 0.0, Width: 100.0, Height: 100.0}
+        EditorSettings:
+            GridColor: {R: 0.7058824, G: 0.7058824, B: 0.7058824}
+            SceneUnit: 1.0
+            Mode: !SceneEditorGraphicsModeLDRSettings
+                BackgroundColor: {R: 0.196078435, G: 0.196078435, B: 0.196078435}

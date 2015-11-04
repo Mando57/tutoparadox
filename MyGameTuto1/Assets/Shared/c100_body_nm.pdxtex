@@ -1,0 +1,16 @@
+!Texture
+Id: c218cc7f-3ea4-4eba-8cfd-7f69981fc2dd
+SerializedVersion: 1
+Tags: []
+Source: ../../../../AnimatedModel/AnimatedModel/RawAssets/knight/c100_body_nm.jpg
+ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+PremultiplyAlpha: false
+~Base:
+    Location: --import--
+    Asset: !Texture
+        Id: 00000000-0000-0000-0000-000000000000
+        SerializedVersion: 1
+        Tags: []
+        ImporterId: a15ae42d-42c5-4a3b-9f7e-f8cd91eda595
+        ColorKeyColor: {R: 255, G: 0, B: 255, A: 255}
+        PremultiplyAlpha: false

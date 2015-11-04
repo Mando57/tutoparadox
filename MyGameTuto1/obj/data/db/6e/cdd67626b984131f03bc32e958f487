@@ -1,0 +1,33 @@
+﻿// Copyright (c) 2014 Silicon Studio Corp. (http://siliconstudio.co.jp)
+// This file is distributed under GPL v3. See LICENSE.md for details.
+
+class MaterialHighlightingShader : ShadingBase
+{
+    [Link("SceneEditorParameters.HighlightColor")]
+    [Color]
+    float4 HighlightColor;
+
+    [Link("SceneEditorParameters.IsMaterialHighlighted")]
+    bool IsMaterialHighlighted;
+    [Link("SceneEditorParameters.IsMeshHighlighted")]
+    bool IsMeshHighlighted;
+    [Link("SceneEditorParameters.IsMaterialInModelComponentHighlighted")]
+    bool IsMaterialInModelComponentHighlighted;
+    [Link("SceneEditorParameters.IsModelComponentHighlighted")]
+    bool IsModelComponentHighlighted;
+
+    // method computing color
+    stage override float4 Shading()
+    {
+      // Either the mesh is highlighted, or the material, or the material and the model component
+        if (IsMeshHighlighted || IsMaterialHighlighted
+            || (IsMaterialInModelComponentHighlighted && IsModelComponentHighlighted))
+        {
+            return HighlightColor;
+        }
+        else
+        {
+            return float4(0,0,0,0);
+        }
+    }
+};

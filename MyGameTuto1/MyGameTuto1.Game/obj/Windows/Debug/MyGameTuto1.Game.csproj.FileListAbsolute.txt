@@ -1,0 +1,5 @@
+C:\Users\cdincher\Documents\Paradox Projects\MyGameTuto1\MyGameTuto1\Bin\Windows\Debug\MyGameTuto1.Game.dll
+C:\Users\cdincher\Documents\Paradox Projects\MyGameTuto1\MyGameTuto1\Bin\Windows\Debug\MyGameTuto1.Game.pdb
+C:\Users\cdincher\Documents\Paradox Projects\MyGameTuto1\MyGameTuto1\MyGameTuto1.Game\obj\Windows\Debug\MyGameTuto1.Game.csprojResolveAssemblyReference.cache
+C:\Users\cdincher\Documents\Paradox Projects\MyGameTuto1\MyGameTuto1\MyGameTuto1.Game\obj\Windows\Debug\MyGameTuto1.Game.dll
+C:\Users\cdincher\Documents\Paradox Projects\MyGameTuto1\MyGameTuto1\MyGameTuto1.Game\obj\Windows\Debug\MyGameTuto1.Game.pdb

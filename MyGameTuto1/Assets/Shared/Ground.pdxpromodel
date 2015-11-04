@@ -1,0 +1,13 @@
+!ProceduralModelAsset
+Id: 37f7fc57-0e2e-409a-b712-dbd54c2c4d6f
+SerializedVersion: 5
+Tags: []
+Type: !PlaneProceduralModel
+    Size: {X: 10.0, Y: 10.0}
+    Tessellation: {X: 1, Y: 1}
+    Normal: UpY
+    GenerateBackFace: false
+    Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+    UvScale: {X: 1.0, Y: 1.0}
+    MaterialInstance:
+        Material: ab8a21e7-818d-4dff-91c3-d769d6cc73fa:Ground Material
